@@ -1,20 +1,22 @@
-import React from 'react'
+import React,{useState} from 'react';
+
 
 const Article = (props)=>{
-    console.log(props.titre)
+    const [valDefaut]=useState(props.titre)
+    console.log(valDefaut)
     return(
         <div>
 
             {
-                props.titre.map((titre,index)=>{
+                valDefaut.map((titre,index)=>{
                     return(
                         <h1 key={index}>{titre.titre}</h1>
+                        // <p>yo</p>
                     )
                 })
             }
-            
            
-
+           
         </div>
     )
     
